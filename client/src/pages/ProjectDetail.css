@@ -1,0 +1,148 @@
+.tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--txt-2);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all .15s;
+  cursor: pointer;
+}
+.tab:hover { color: var(--txt); }
+.tab.active { color: var(--indigo); border-bottom-color: var(--indigo); }
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.filter-select { width: auto; min-width: 150px; }
+
+/* ── Kanban ───────────────────────────────────────────────── */
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 14px;
+  overflow-x: auto;
+}
+
+@media (max-width: 900px) {
+  .kanban { grid-template-columns: repeat(2, 1fr); }
+}
+
+.kanban-col {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.kanban-col-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.kanban-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  min-height: 80px;
+}
+
+.kanban-empty {
+  text-align: center;
+  padding: 20px;
+  color: var(--txt-3);
+  font-size: 0.8rem;
+}
+
+.kanban-card {
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  cursor: pointer;
+  transition: border-color .15s;
+}
+.kanban-card:hover { border-color: var(--indigo); }
+
+.kanban-card-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.kanban-card-desc {
+  font-size: 0.78rem;
+  color: var(--txt-2);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.kanban-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Table ────────────────────────────────────────────────── */
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-table th {
+  padding: 10px 16px;
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--txt-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.task-table td {
+  padding: 12px 16px;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.task-table-row { cursor: pointer; transition: background .1s; }
+.task-table-row:hover { background: var(--surface); }
+.task-table-row:last-child td { border-bottom: none; }
+
+/* ── Members ──────────────────────────────────────────────── */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.member-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
