@@ -103,3 +103,5 @@ INSERT INTO tasks (title, description, status, priority, project_id, assignee_id
 ('Write API documentation','Document all REST endpoints with examples','done',      'low',    1, 2, 1, DATE_SUB(CURDATE(), INTERVAL 2  DAY)),
 ('Implement auth flow',    'JWT-based login and registration',       'in_review',   'critical',2, 3, 1, DATE_ADD(CURDATE(), INTERVAL 3  DAY)),
 ('Push notifications',     'Integrate FCM for push notifications',   'todo',        'medium', 2, 2, 1, DATE_SUB(CURDATE(), INTERVAL 1  DAY));
+
+
